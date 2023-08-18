@@ -5,30 +5,47 @@ this library is build with Pure Vanilla JavaScript
 
 # Usage
 
-> ``` <script src="path/fetching.js" ></script> ```
+```html 
+<script src="path/fetching.js" ></script>
+```
 
 # Examples
+
 Fetch All Elements by ClassName
-```javascript let elements = document.getAllByClass("className") ```
+
+```javascript 
+let elements = document.getAllByClass("className")
+```
 
 Fetch Specific Element By ClassName
 
-```javascript let element = document.getByClassIndex("className", index) ```
+```javascript
+let element = document.getByClassIndex("className", index)
+```
 
 Fetch Element By Id
-```javascript let element = document.getById("id") ```
+
+```javascript
+let element = document.getById("id")
+```
 
 Fetch Element by Query Selector
 
-```javascript let element = document.getByQuery("query") ```
+```javascript
+let element = document.getByQuery("query")
+```
 
 Fetch All Elements by Query Selector All
 
-```javascript let elements = document.getByQueryAll("query") ```
+```javascript
+let elements = document.getByQueryAll("query")
+```
 
 Fetch Specific Element by Query Selector All
 
-```javascript let element = document.getByQueryIndex("query", index) ```
+```javascript
+let element = document.getByQueryIndex("query", index)
+```
 
 **There are more Methods added to DOM for Fetching Elements**
 
