@@ -1,3 +1,8 @@
+
+/*
+    Author : Aalim aslam
+*/
+
 // fetch request with async/await
 async function fetchAsync (url) {
     let response = await fetch(url);
