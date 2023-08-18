@@ -1,5 +1,5 @@
 # js-lib
-##### Lightweight JavaScript Library for Faster 
+##### Lightweight JavaScript Library for Faster Development Experience
 
 this library is build with Pure Vanilla JavaScript
 
