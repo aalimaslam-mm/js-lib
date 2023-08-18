@@ -11,6 +11,12 @@ this library is build with Pure Vanilla JavaScript
 
 # Examples
 
+use ``` allNodes ``` to fetch all Element nodes in the DOM
+
+```javascript
+    let allNodes = document.allNodes
+```
+
 Fetch All Elements by ClassName
 
 ```javascript 

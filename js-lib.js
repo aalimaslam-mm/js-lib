@@ -72,7 +72,6 @@ function getElementNodesOnly(){
 }
 
 let allNodes = getElementNodesOnly();
-
 // Adding some methods to all the elements inside document object
 allNodes.loop((node,index)=>{
     node.getByQuery = (query) => node.querySelector(query);
@@ -85,5 +84,4 @@ allNodes.loop((node,index)=>{
     node.getById = id => node.getElementById(id);
 })
 
-
-console.log(allNodes)
+document.allNodes = allNodes;
