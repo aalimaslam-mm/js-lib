@@ -3,8 +3,8 @@
     Author : Aalim aslam
 */
 
-// fetch request with async/await
-async function fetchAsync (url) {
+// get request with async/await
+async function getReq (url) {
     let response = await fetch(url);
     let data = await response.json();
     return data;
@@ -89,4 +89,132 @@ allNodes.loop((node,index)=>{
     node.getById = id => node.getElementById(id);
 })
 
-document.allNodes = allNodes;
+//post request
+async function postReq(url, headers){
+    const response = await fetch(url, {
+        method: 'POST',
+        headers : {
+            method: 'POST',
+            ...headers
+        }
+    });
+    const resData = await response.json();
+    return resData;
+}
+window.postReq = postReq;
+
+//put request
+async function putReq(url, headers){
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers
+    });
+    const resData = await response.json();
+    return resData;
+}
+window.putReq = putReq;
+
+//delete request
+async function deleteReq(url){
+    const response = await fetch(url, {method: 'DELETE'});
+    const resData = await response.json();
+    return resData;
+}
+window.deleteReq = deleteReq;
+
+
+//Toggle Class
+Object.prototype.classToggle = function (className) {
+    if(!this.nodeName){
+        console.error('Element is not of HTML type');
+        return;
+    }
+    this.classList.toggle(className);
+}
+
+// Add Class
+Object.prototype.classAdd = function (className) {
+    if(!this.nodeName){
+        console.error('Element is not of HTML type');
+        return;
+    }
+    this.classList.add(className);
+}
+
+// Remove Class
+Object.prototype.classRemove = function (className) {
+    if(!this.nodeName){
+        console.error('Element is not of HTML type');
+        return;
+    }
+    this.classList.remove(className);
+}
+
+// Check if class exists
+Object.prototype.classContains = function (className) {
+    if(!this.nodeName){
+        console.error('Element is not of HTML type');
+        return;
+    }
+    return this.classList.contains(className);
+}
+
+// Replace Class
+Object.prototype.classReplace = function (oldClass, newClass) {
+    if(!this.nodeName){
+        console.error('Element is not of HTML type');
+        return;
+    }
+    this.classList.replace(oldClass, newClass);
+}
+
+// Binary Search on Array 
+Array.prototype.binarySearch = function (item){
+    let start = 0;
+    let end = this.length - 1;
+    let mid = Math.floor((start + end)/2);
+    while(this[mid] !== item && start <= end){
+        if(item < this[mid]){
+            end = mid - 1;
+        }else{
+            start = mid + 1;
+        }
+        mid = Math.floor((start + end)/2);
+    }
+    return this[mid] !== item ? -1 : mid;
+}
+
+// Get Even Elements of an Array 
+Array.prototype.getEvenElements = function (){
+    return this.filter((item) => item % 2 === 0);
+}
+
+// Get Odd Elements of an Array 
+Array.prototype.getOddElements = function (){
+    return this.filter((item) => item % 2 !== 0);
+}
+
+// Get Unique Elements of an Array
+Array.prototype.getUniqueElements = function (){
+    return [...new Set(this)];
+}
+
+// Get Sum of an Array
+Array.prototype.getSum = function (){
+    return this.reduce((acc, item) => acc + item, 0);
+}
+
+//Get Keys of an Object
+Object.prototype.getKeys = function (){
+    return Object.keys(this);
+}
+
+//Get Values of an Object
+Object.prototype.getValues = function (){
+    return Object.values(this);
+}
+
+//Get Entries of an Object
+Object.prototype.getEntries = function (){
+    return Object.entries(this);
+}
