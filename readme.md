@@ -113,22 +113,48 @@ async function postData (url){
 
 #### Methods on DOM Elements
 
-``` element.classToggle(className) ```
-``` element.classAdd(className) ```
-``` element.classRemove(className) ```
-``` element.classContains(className) ```
-``` element.classReplace(oldClass, newClass) ```
+```javascript
+element.classToggle(className) 
+```
+```javascript
+element.classAdd(className) 
+```
+```javascript
+element.classRemove(className) 
+```
+```javascript
+element.classContains(className) 
+```
+```javascript
+element.classReplace(oldClass, newClass) 
+```
 
 #### Methods on Array 
 
-``` array.binarySearch(itemToSearch) ```
-``` array.getEvenElements() ```
-``` array.getOddElements() ```
-``` array.getUniqueElements() ```
-``` array.getSum() ```
+```javascript
+array.binarySearch(itemToSearch)
+```
+```javascript
+array.getEvenElements() 
+```
+```javascript
+array.getOddElements() 
+```
+```javascript
+array.getUniqueElements() 
+```
+```javascript
+array.getSum() 
+```
 
 #### Methods on Object
 
-``` object.getKeys() ```
-``` object.getValues() ```
-``` object.getEntries() ```
+```javascript
+object.getKeys() 
+```
+```javascript
+object.getValues() 
+```
+```javascript
+object.getEntries() 
+```
