@@ -9,7 +9,42 @@ async function getReq (url) {
     let data = await response.json();
     return data;
 }
-window.fetchAsync = fetchAsync;
+window.getReq = getReq;
+
+
+//post request
+async function postReq(url, headers){
+    const response = await fetch(url, {
+        method: 'POST',
+        headers : {
+            method: 'POST',
+            ...headers
+        }
+    });
+    const resData = await response.json();
+    return resData;
+}
+window.postReq = postReq;
+
+//put request
+async function putReq(url, headers){
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers
+    });
+    const resData = await response.json();
+    return resData;
+}
+window.putReq = putReq;
+
+//delete request
+async function deleteReq(url){
+    const response = await fetch(url, {method: 'DELETE'});
+    const resData = await response.json();
+    return resData;
+}
+window.deleteReq = deleteReq;
+
 
 // Looping for an array 
 Array.prototype.loop = function (callback) {
@@ -88,40 +123,6 @@ allNodes.loop((node,index)=>{
     node.getByTagIndex = (tagName, idx=0) => node.getElementsByTagName(tagName)[idx];
     node.getById = id => node.getElementById(id);
 })
-
-//post request
-async function postReq(url, headers){
-    const response = await fetch(url, {
-        method: 'POST',
-        headers : {
-            method: 'POST',
-            ...headers
-        }
-    });
-    const resData = await response.json();
-    return resData;
-}
-window.postReq = postReq;
-
-//put request
-async function putReq(url, headers){
-    const response = await fetch(url, {
-        method: 'PUT',
-        headers
-    });
-    const resData = await response.json();
-    return resData;
-}
-window.putReq = putReq;
-
-//delete request
-async function deleteReq(url){
-    const response = await fetch(url, {method: 'DELETE'});
-    const resData = await response.json();
-    return resData;
-}
-window.deleteReq = deleteReq;
-
 
 //Toggle Class
 Object.prototype.classToggle = function (className) {
